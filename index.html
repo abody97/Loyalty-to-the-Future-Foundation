@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>مؤسسة ولاء المستقبل للمقاولات العامة</title>
+    <!-- ميتا تاغات لتحسين SEO -->
+    <meta name="description" content="مؤسسة ولاء المستقبل للمقاولات العامة، نقدم خدمات المقاولات، تأجير المعدات الثقيلة، ولدينا مشاريع تحت الإنشاء ومشاريع منجزة في حائل وخارجها.">
+    <meta name="keywords" content="ولاء المستقبل, مقاولات عامة, تأجير معدات ثقيلة, مشاريع بناء, حائل, رؤية 2030, محمد بن سلمان">
+    <!-- ميتا تاغ لجعل الموقع متجاوبًا على جميع الأجهزة -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ربط ملفات Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- ربط ملفات Animate.css للأنيميشن -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- ربط مكتبة AOS للأنيميشن عند التمرير -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <!-- ربط مكتبة Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- تخصيص الخطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- تضمين CSS الخاص بالموقع -->
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: #333;
+        }
+        /* تصميم الهيدر مع خلفية متدرجة وصورة */
+        .header {
+            position: relative;
+            background: linear-gradient(135deg, #0a3d62, #3c6382), url('images/construction-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            color: #fff;
+            overflow: hidden;
+        }
+        .header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+        .header .container {
+            position: relative;
+            z-index: 2;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+            margin-left: 15px;
+        }
+        .navbar-dark .navbar-nav .nav-link.active {
+            font-weight: bold;
+        }
+        /* تأثير تغير لون النافبار عند التمرير */
+        .navbar.scrolled {
+            background: linear-gradient(135deg, #0a3d62, #3c6382) !important;
+            transition: background 200ms linear;
+        }
+        /* تصميم قسم الخدمات */
+        #services {
+            background: #f8f9fa;
+            color: #333;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        #services .service {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #services .service i {
+            font-size: 4rem;
+            color: #0a3d62;
+            margin-bottom: 15px;
+        }
+        /* تصميم قسم المشاريع */
+        #projects {
+            background: #fff;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .project-item img {
+            width: 100%;
+            transition: transform 0.5s;
+            border-radius: 8px;
+        }
+        .project-item:hover img {
+            transform: scale(1.05);
+        }
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 61, 98, 0.8);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .project-item:hover .project-overlay {
+            opacity: 1;
+        }
+        /* تصميم قسم رؤية 2030 */
+        #vision2030 {
+            background: url('images/vision2030-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+        #vision2030::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 61, 98, 0.8);
+        }
+        #vision2030 .container {
+            position: relative;
+            z-index: 2;
+        }
+        /* تصميم الفوتر */
+        footer {
+            background: #0a3d62;
+            color: #fff;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        /* أزرار التواصل الاجتماعي */
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ff9e3b;
+        }
+        /* تأثير تتبع مؤشر الماوس */
+        .cursor {
+            width: 15px;
+            height: 15px;
+            border: 2px solid #ff9e3b;
+            border-radius: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease-out;
+        }
+        /* تعديل أزرار الموقع */
+        .btn-primary {
+            background-color: #ff9e3b;
+            border-color: #ff9e3b;
+        }
+        .btn-primary:hover {
+            background-color: #d18a2b;
+            border-color: #d18a2b;
+        }
+        .btn-outline-primary {
+            color: #ff9e3b;
+            border-color: #ff9e3b;
+        }
+        .btn-outline-primary:hover {
+            background-color: #ff9e3b;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- عنصر تتبع مؤشر الماوس -->
+    <div class="cursor"></div>
+
+    <!-- النافبار -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">مؤسسة ولاء المستقبل</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">مشاريعنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vision2030">رؤية 2030</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- نهاية النافبار -->
+
+    <!-- القسم الرئيسي -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="text-center">
+                <h1 class="animate__animated animate__fadeInDown">مؤسسة ولاء المستقبل</h1>
+                <p class="animate__animated animate__fadeInUp">روّاد المقاولات وتأجير المعدات الثقيلة</p>
+                <a href="#about" class="btn btn-primary mt-3">تعرّف علينا أكثر</a>
+            </div>
+        </div>
+    </header>
+    <!-- نهاية القسم الرئيسي -->
+
+    <!-- قسم من نحن -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center" data-aos="fade-up">
+                <div class="col-md-6">
+                    <img src="images/company-photo.jpg" alt="مؤسسة ولاء المستقبل" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2>من نحن</h2>
+                    <p>مؤسسة ولاء المستقبل للمقاولات العامة تأسست في حائل، وتقدم خدمات المقاولات العامة وتأجير المعدات الثقيلة. لدينا خبرة واسعة في تنفيذ المشاريع بجودة عالية ووفقًا للمعايير العالمية.</p>
+                    <p>نسعى دائمًا لتحقيق رضا عملائنا وتقديم أفضل الحلول لهم، مع الالتزام برؤية المملكة 2030 التي يقودها سمو الأمير محمد بن سلمان.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- نهاية قسم من نحن -->
+
+    <!-- قسم الخدمات -->
+    <section id="services">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">خدماتنا</h2>
+            <div class="row">
+                <!-- خدمة 1 -->
+                <div class="col-md-4 service" data-aos="fade-up">
+                    <i class="fas fa-building"></i>
+                    <h4 class="mt-3">المقاولات العامة</h4>
+                    <p>تنفيذ مشاريع البناء والتشييد بمختلف أنواعها وفقًا لأعلى معايير الجودة.</p>
+                </div>
+                <!-- خدمة 2 -->
+                <div class="col-md-4 service" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-truck-moving"></i>
+                    <h4 class="mt-3">تأجير المعدات الثقيلة</h4>
+                    <p>توفير أحدث المعدات الثقيلة مثل البوكلين والشياول لتلبية احتياجات مشاريعكم.</p>
+                </div>
+                <!-- خدمة 3 -->
+                <div class="col-md-4 service" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-tools"></i>
+                    <h4 class="mt-3">الصيانة والدعم الفني</h4>
+                    <p>تقديم خدمات الصيانة والدعم الفني للمشاريع والمعدات لضمان استمرارية العمل.</p>
+                </div>
+                <!-- خدمة 4 -->
+                <div class="col-md-4 service" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-project-diagram"></i>
+                    <h4 class="mt-3">إدارة المشاريع</h4>
+                    <p>تقديم خدمات إدارة المشاريع لضمان تنفيذ المشاريع بكفاءة وفي الوقت المحدد.</p>
+                </div>
+                <!-- خدمة 5 -->
+                <div class="col-md-4 service" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-hard-hat"></i>
+                    <h4 class="mt-3">الاستشارات الهندسية</h4>
+                    <p>تقديم استشارات هندسية متخصصة للمشاريع لضمان أفضل النتائج.</p>
+                </div>
+                <!-- خدمة 6 -->
+                <div class="col-md-4 service" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-road"></i>
+                    <h4 class="mt-3">تطوير البنية التحتية</h4>
+                    <p>العمل على مشاريع تطوير البنية التحتية مثل الطرق والجسور وشبكات المياه.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- نهاية قسم الخدمات -->
+
+    <!-- قسم المشاريع -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">مشاريعنا</h2>
+            <div class="row">
+                <!-- مشروع 1 -->
+                <div class="col-md-4 mb-4" data-aos="zoom-in">
+                    <div class="project-item">
+                        <img src="images/project1.jpg" alt="مشروع بناء مجمع سكني">
+                        <div class="project-overlay">
+                            <h5>مشروع بناء مجمع سكني</h5>
+                            <p>قمنا بإنشاء مجمع سكني حديث يتألف من 50 وحدة سكنية مجهزة بأحدث المرافق، مع تصميم معماري يجمع بين الأصالة والحداثة.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- مشروع 2 -->
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-item">
+                        <img src="images/project2.jpg" alt="تطوير منطقة تجارية">
+                        <div class="project-overlay">
+                            <h5>تطوير منطقة تجارية</h5>
+                            <p>نفذنا أعمال البنية التحتية والتشييد لمركز تجاري حديث يضم مجموعة متنوعة من المحلات التجارية والمطاعم.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- مشروع 3 -->
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-item">
+                        <img src="images/project3.jpg" alt="مشروع تطوير مجمع صناعي">
+                        <div class="project-overlay">
+                            <h5>تطوير مجمع صناعي</h5>
+                            <p>نعمل حاليًا على تطوير مجمع صناعي متكامل يهدف إلى دعم القطاع الصناعي وتوفير فرص استثمارية جديدة.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- مشروع 4 -->
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-item">
+                        <img src="images/project4.jpg" alt="توسعة طريق سريع">
+                        <div class="project-overlay">
+                            <h5>توسعة طريق سريع</h5>
+                            <p>شاركنا في مشروع توسعة الطريق السريع الذي يربط بين المدن الرئيسية، مما يسهم في تحسين حركة المرور وتقليل الازدحام.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- مشروع 5 -->
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-item">
+                        <img src="images/project5.jpg" alt="إنشاء جسر حديث">
+                        <div class="project-overlay">
+                            <h5>إنشاء جسر حديث</h5>
+                            <p>أكملنا بناء جسر حديث يربط بين ضفتي النهر، مصمم بأحدث التقنيات لضمان السلامة والكفاءة.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- مشروع 6 -->
+                <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="project-item">
+                        <img src="images/project6.jpg" alt="تطوير شبكة مياه">
+                        <div class="project-overlay">
+                            <h5>تطوير شبكة مياه</h5>
+                            <p>قمنا بتطوير وتحديث شبكة المياه في منطقة حائل لتحسين جودة الخدمة وتوفير المياه بشكل مستدام.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- نهاية قسم المشاريع -->
+
+    <!-- قسم رؤية 2030 -->
+    <section id="vision2030">
+        <div class="container">
+            <h2 class="mb-4">رؤية المملكة 2030</h2>
+            <p>نلتزم في مؤسسة ولاء المستقبل بتحقيق رؤية المملكة 2030 التي يقودها سمو الأمير محمد بن سلمان، من خلال المساهمة في تطوير البنية التحتية والمشاريع الحيوية التي تدعم الاقتصاد الوطني وتوفر فرص العمل.</p>
+        </div>
+    </section>
+    <!-- نهاية قسم رؤية 2030 -->
+
+    <!-- قسم الاتصال -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">اتصل بنا</h2>
+            <div class="row">
+                <!-- معلومات الاتصال -->
+                <div class="col-md-6" data-aos="fade-up">
+                    <h4>معلومات الاتصال</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> العنوان: حائل، المملكة العربية السعودية</p>
+                    <p><i class="fas fa-phone"></i> الهاتف: 0123456789</p>
+                    <p><i class="fas fa-envelope"></i> البريد الإلكتروني: info@walaaalmustaqbal.com</p>
+                </div>
+                <!-- نموذج الاتصال -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">الاسم</label>
+                            <input type="text" class="form-control" id="name" placeholder="أدخل اسمك" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">الرسالة</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="أدخل رسالتك" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- نهاية قسم الاتصال -->
+
+    <!-- الفوتر -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <!-- إضافة المزيد من الروابط إذا رغبت -->
+            </div>
+            <p>&copy; 2023 مؤسسة ولاء المستقبل. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <!-- نهاية الفوتر -->
+
+    <!-- ربط ملفات JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- ربط ملفات Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ربط مكتبة GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ربط ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- ربط مكتبة AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- تضمين JavaScript الخاص بك -->
+    <script>
+        // تفعيل AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // تأثير تغير لون النافبار عند التمرير
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // تأثير تتبع مؤشر الماوس
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // أنيميشن باستخدام GSAP و ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from("#about .col-md-6", {
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top 80%",
+            },
+            x: -100,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2
+        });
+
+        gsap.from("#services .service", {
+            scrollTrigger: {
+                trigger: "#services",
+                start: "top 80%",
+            },
+            y: 100,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.2
+        });
+
+        gsap.from("#projects .project-item", {
+            scrollTrigger: {
+                trigger: "#projects",
+                start: "top 80%",
+            },
+            y: 100,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.2
+        });
+
+        gsap.from("#vision2030 h2, #vision2030 p", {
+            scrollTrigger: {
+                trigger: "#vision2030",
+                start: "top 80%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.7,
+            stagger: 0.3
+        });
+
+        // معالجة نموذج الاتصال
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // هنا يمكنك إضافة كود لإرسال البيانات إلى الخادم أو استخدام خدمة مثل EmailJS
+            alert('تم إرسال رسالتك بنجاح!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
