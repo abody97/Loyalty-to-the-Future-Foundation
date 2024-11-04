@@ -18,16 +18,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- تخصيص الخطوط -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-
     <!-- تضمين CSS الخاص بالموقع -->
     <style>
         body {
             font-family: 'Cairo', sans-serif;
             color: #333;
             background-color: #f0f0f0;
+            overflow-x: hidden; /* منع التمرير الأفقي */
         }
         /* تصميم الهيدر مع خلفية متدرجة وصورة */
         .header {
@@ -221,7 +218,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="#home">الرئيسية</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
@@ -252,8 +249,8 @@
     <!-- قسم من نحن -->
     <section id="about" class="py-5">
         <div class="container">
-            <div class="row align-items-center" data-aos="fade-up">
-                <div class="col-md-6">
+            <div class="row align-items-center text-center text-md-start" data-aos="fade-up">
+                <div class="col-md-6 mb-4 mb-md-0">
                     <img src="images/000.png" alt="مؤسسة ولاء المستقبل" class="img-fluid rounded">
                 </div>
                 <div class="col-md-6">
@@ -270,9 +267,9 @@
     <section id="services">
         <div class="container">
             <h2 class="text-center mb-5" data-aos="fade-up">خدماتنا</h2>
-            <div class="row">
+            <div class="row justify-content-center">
                 <!-- خدمة 1 -->
-                <div class="col-md-4 service" data-aos="fade-up">
+                <div class="col-md-4 col-sm-6 service" data-aos="fade-up">
                     <i class="fas fa-building"></i>
                     <h4 class="mt-3">المقاولات العامة</h4>
                     <p>نقدم خدمات المقاولات العامة التي تشمل:</p>
@@ -285,7 +282,7 @@
                     </ul>
                 </div>
                 <!-- خدمة 2 -->
-                <div class="col-md-4 service" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-4 col-sm-6 service" data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-truck-moving"></i>
                     <h4 class="mt-3">تأجير المعدات الثقيلة</h4>
                     <p>نوفر مجموعة واسعة من المعدات الثقيلة الحديثة لتلبية احتياجاتكم، بما في ذلك:</p>
@@ -298,7 +295,7 @@
                     </ul>
                 </div>
                 <!-- خدمة 3 -->
-                <div class="col-md-4 service" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-4 col-sm-6 service" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-tools"></i>
                     <h4 class="mt-3">الصيانة والدعم الفني</h4>
                     <p>نقدم خدمات الصيانة والدعم الفني التي تشمل:</p>
@@ -321,12 +318,12 @@
             <h2 class="text-center mb-5" data-aos="fade-up">مشاريعنا</h2>
 
             <!-- المشاريع الحالية -->
-            <h3 data-aos="fade-up">المشاريع الحالية</h3>
-            <div class="row">
+            <h3 class="text-center" data-aos="fade-up">المشاريع الحالية</h3>
+            <div class="row justify-content-center">
                 <!-- مشروع 1 -->
-                <div class="col-md-4" data-aos="zoom-in">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in">
                     <div class="project-item">
-                        <img src="images/132.jpg" alt="تطوير مجمع صناعي">
+                        <img src="images/132.jpg" alt="تطوير مجمع صناعي" class="img-fluid">
                         <div class="project-content">
                             <h5>تطوير مجمع صناعي</h5>
                             <p>نعمل حاليًا على تطوير مجمع صناعي متكامل يهدف إلى دعم القطاع الصناعي وتوفير فرص استثمارية جديدة.</p>
@@ -334,9 +331,9 @@
                     </div>
                 </div>
                 <!-- مشروع 2 -->
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="project-item">
-                        <img src="images/132.jpg" alt="إنشاء محطة طاقة شمسية">
+                        <img src="images/132.jpg" alt="إنشاء محطة طاقة شمسية" class="img-fluid">
                         <div class="project-content">
                             <h5>إنشاء محطة طاقة شمسية</h5>
                             <p>نشارك في بناء محطة طاقة شمسية لدعم مبادرات الطاقة المتجددة وتوفير بدائل نظيفة للطاقة.</p>
@@ -344,9 +341,9 @@
                     </div>
                 </div>
                 <!-- مشروع 3 -->
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
                     <div class="project-item">
-                        <img src="images/132.jpg" alt="بناء مستشفى حديث">
+                        <img src="images/132.jpg" alt="بناء مستشفى حديث" class="img-fluid">
                         <div class="project-content">
                             <h5>بناء مستشفى حديث</h5>
                             <p>نعمل على بناء مستشفى مجهز بأحدث التقنيات الطبية، يهدف إلى تحسين الخدمات الصحية في المنطقة.</p>
@@ -356,12 +353,12 @@
             </div>
 
             <!-- المشاريع السابقة -->
-            <h3 data-aos="fade-up">المشاريع السابقة</h3>
-            <div class="row">
+            <h3 class="text-center mt-5" data-aos="fade-up">المشاريع السابقة</h3>
+            <div class="row justify-content-center">
                 <!-- مشروع 4 -->
-                <div class="col-md-4" data-aos="zoom-in">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in">
                     <div class="project-item">
-                        <img src="images/236.jpg" alt="مشروع بناء مجمع سكني">
+                        <img src="images/236.jpg" alt="مشروع بناء مجمع سكني" class="img-fluid">
                         <div class="project-content">
                             <h5>مشروع بناء مجمع سكني</h5>
                             <p>قمنا بإنشاء مجمع سكني حديث يتألف من 50 وحدة سكنية مجهزة بأحدث المرافق.</p>
@@ -369,9 +366,9 @@
                     </div>
                 </div>
                 <!-- مشروع 5 -->
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="project-item">
-                        <img src="images/236.jpg" alt="تطوير منطقة تجارية">
+                        <img src="images/236.jpg" alt="تطوير منطقة تجارية" class="img-fluid">
                         <div class="project-content">
                             <h5>تطوير منطقة تجارية</h5>
                             <p>نفذنا أعمال البنية التحتية والتشييد لمركز تجاري حديث يضم متاجر متنوعة.</p>
@@ -379,9 +376,9 @@
                     </div>
                 </div>
                 <!-- مشروع 6 -->
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
                     <div class="project-item">
-                        <img src="images/236.jpg" alt="توسعة طريق سريع">
+                        <img src="images/236.jpg" alt="توسعة طريق سريع" class="img-fluid">
                         <div class="project-content">
                             <h5>توسعة طريق سريع</h5>
                             <p>شاركنا في مشروع توسعة الطريق السريع الذي يربط بين المدن الرئيسية.</p>
@@ -389,9 +386,9 @@
                     </div>
                 </div>
                 <!-- مشروع 7 -->
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
                     <div class="project-item">
-                        <img src="images/236.jpg" alt="إنشاء جسر حديث">
+                        <img src="images/236.jpg" alt="إنشاء جسر حديث" class="img-fluid">
                         <div class="project-content">
                             <h5>إنشاء جسر حديث</h5>
                             <p>أكملنا بناء جسر يربط بين ضفتي النهر، مصمم بأحدث التقنيات.</p>
@@ -399,9 +396,9 @@
                     </div>
                 </div>
                 <!-- مشروع 8 -->
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
                     <div class="project-item">
-                        <img src="images/369.jpg" alt="تطوير شبكة مياه">
+                        <img src="images/369.jpg" alt="تطوير شبكة مياه" class="img-fluid">
                         <div class="project-content">
                             <h5>تطوير شبكة مياه</h5>
                             <p>قمنا بتطوير وتحديث شبكة المياه في منطقة حائل لتحسين الخدمة.</p>
@@ -409,9 +406,9 @@
                     </div>
                 </div>
                 <!-- مشروع 9 -->
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="500">
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
                     <div class="project-item">
-                        <img src="images/369.jpg" alt="تطوير شبكة اتصالات">
+                        <img src="images/369.jpg" alt="تطوير شبكة اتصالات" class="img-fluid">
                         <div class="project-content">
                             <h5>تطوير شبكة اتصالات</h5>
                             <p>عملنا على تطوير البنية التحتية لشبكات الاتصالات لتحسين الاتصال.</p>
@@ -443,9 +440,11 @@
                     <h4>معلومات الاتصال</h4>
                     <p><i class="fas fa-map-marker-alt"></i> العنوان: حائل، المملكة العربية السعودية</p>
                     <p><i class="fas fa-phone"></i> الجوال: 0538406959</p>
-                    <p><i class="fas fa-envelope"></i> wala.almstgbl@gmail.com :البريد الإلكتروني</p>
+                    <p><i class="fas fa-envelope"></i> البريد الإلكتروني: wala.almstgbl@gmail.com</p>
                     <!-- خريطة الموقع -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d613.0055154569893!2d41.71302959916795!3d27.47357815917701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDI4JzI0LjkiTiA0McKwNDInNDYuMiJF!5e1!3m2!1sar!2ssa!4v1730715460157!5m2!1sar!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-responsive mt-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d613.0055154569893!2d41.71302959916795!3d27.47357815917701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDI4JzI0LjkiTiA0McKwNDInNDYuMiJF!5e1!3m2!1sar!2ssa!4v1730715460157!5m2!1sar!2ssa" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
                 <!-- نموذج الاتصال -->
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -456,7 +455,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="from_email" class="form-label">البريد الإلكتروني</label>
-                            <input type="email" class="form-control" id="abooodyg4@gmail.com" name="from_email" placeholder="أدخل بريدك الإلكتروني" required>
+                            <input type="email" class="form-control" id="from_email" name="from_email" placeholder="أدخل بريدك الإلكتروني" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">الرسالة</label>
@@ -464,7 +463,6 @@
                         </div>
                         <button type="submit" class="btn btn-primary">إرسال</button>
                     </form>
-                    
                 </div>
             </div>
         </div>
@@ -516,18 +514,28 @@
             cursor.style.top = e.clientY + 'px';
         });
 
-        // معالجة نموذج الاتصال
+        // معالجة نموذج الاتصال باستخدام EmailJS
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            // هنا يمكنك إضافة كود لإرسال البيانات إلى الخادم أو استخدام خدمة مثل EmailJS
-            alert('تم إرسال رسالتك بنجاح!');
-            this.reset();
+
+            // إرسال البريد الإلكتروني باستخدام EmailJS
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('تم إرسال رسالتك بنجاح!');
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('حدث خطأ أثناء إرسال الرسالة. حاول مرة أخرى.');
+                });
         });
     </script>
+
+    <!-- ربط مكتبة EmailJS وتكوينها -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
        (function(){
-          emailjs.init("6po52dkWeJcNOG3-6"); // استبدل YOUR_USER_ID بمعرف المستخدم الخاص بك
+          emailjs.init("YOUR_USER_ID"); // استبدل YOUR_USER_ID بمعرّف المستخدم الخاص بك من EmailJS
        })();
     </script>
     
